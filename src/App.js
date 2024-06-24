@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Login } from "./Login"; // Import Login component
+import { Form } from "./Form"; // Import Form component
+import "./App.css"; // You can create and import App.css for global styles
+import { BirthChart } from "./BirthChart";
+import { HomePage } from "./HomePage";
+import { ConfirmingDetails } from "./ConfirmingDetails";
+import { Pacakage } from "./Package";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/birthChart" element={<BirthChart />} />
+        <Route path="/confirmingDetails" element={<ConfirmingDetails />} />
+        <Route path="/package" element={<Pacakage />} />
+      </Routes>
+    </Router>
   );
 }
 

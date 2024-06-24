@@ -1,0 +1,54 @@
+.time-picker-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+  }
+  
+  .time-picker-modal.open {
+    display: block;
+  }
+  
+  .time-picker {
+    width: 300px;
+    max-width: 100%;
+  }
+  
+  .time-display {
+    margin-bottom: 10px;
+  }
+  
+  .time-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .time-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .save-button,
+  .close-button {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .save-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .close-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+  }
+  

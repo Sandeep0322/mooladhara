@@ -1,0 +1,672 @@
+.birth-chart {
+    background-color: #000000;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .birth-chart .overlap {
+    height: 820px;
+    left: 100px;
+    position: relative;
+    top: -10px;
+    width: 2424px;
+  }
+  
+  .birth-chart .frame {
+    align-items: flex-start;
+    display: inline-flex;
+    left: 100px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .birth-chart .image {
+    height: 800px;
+    object-fit: cover;
+    position: relative;
+    width: 1202px;
+  }
+  
+  .birth-chart .img {
+    height: 800px;
+    object-fit: cover;
+    position: relative;
+    width: 238px;
+  }
+  
+  .birth-chart .text-wrapper {
+    color: #ffde59;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 25px;
+    font-weight: 600;
+    left: 574px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 49px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .div {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 20px;
+    left: 110px;
+    position: absolute;
+    top: 110px;
+  }
+  
+  .birth-chart .overlap-wrapper {
+    border: 1px solid;
+    border-color: #3a3a3a;
+    border-radius: 20px;
+    height: 600px;
+    position: relative;
+    width: 500px;
+    left: 15px
+  }
+  
+  .birth-chart .overlap-group {
+    background-color: #111111;
+    border-radius: 17px;
+    height: 580px;
+    left: 11px;
+    position: relative;
+    top: 10px;
+    width: 480px;
+  }
+  
+  .birth-chart .overlap-group-wrapper {
+    background-color: #070707;
+    border: 1px solid;
+    border-color: #484848;
+    border-radius: 15px;
+    height: 352px;
+    left: 64px;
+    overflow: hidden;
+    position: absolute;
+    top: 206px;
+    width: 352px;
+  }
+  
+  .birth-chart .overlap-group-2 {
+    height: 349px;
+    position: relative;
+    top: 1px;
+    width: 349px;
+  }
+  
+  .birth-chart .rectangle {
+    border: 0.5px solid;
+    border-color: #cdcdcd;
+    height: 246px;
+    left: 52px;
+    position: absolute;
+    top: 51px;
+    transform: rotate(45deg);
+    width: 246px;
+  }
+  
+  .birth-chart .line {
+    height: 345px;
+    left: 0;
+    position: absolute;
+    top: 3px;
+    width: 345px;
+  }
+  
+  .birth-chart .line-2 {
+    height: 344px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    width: 344px;
+  }
+  
+  .birth-chart .text-wrapper-2 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 258px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 314px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-3 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 303px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 251px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-4 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 258px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 223px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-5 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 297px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 68px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-6 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 258px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 51px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-7 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 172px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 142px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-8 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 81px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 58px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-9 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 47px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 78px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-10 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 84px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 223px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-11 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 47px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 251px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-12 {
+    color: #7f7f7f;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 251px;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-13 {
+    color: #7f7f7f;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 77px;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-14 {
+    color: #7f7f7f;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 231px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 199px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-15 {
+    color: #7f7f7f;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 321px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 70px;
+    transform: rotate(90deg);
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-16 {
+    color: #7f7f7f;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 319px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 250px;
+    transform: rotate(90deg);
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-17 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 78px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 312px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .text-wrapper-18 {
+    color: #ffde59bf;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    left: 169px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 292px;
+    white-space: nowrap;
+  }
+  
+  .birth-chart .frame-2 {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 157px;
+    position: absolute;
+    top: 23px;
+  }
+  
+  .birth-chart .frame-3 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .birth-chart .image-2 {
+    height: 47px;
+    position: relative;
+    width: 48px;
+  }
+  
+  .birth-chart .frame-4 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 6px;
+    position: relative;
+  }
+  
+  .birth-chart .text-wrapper-19 {
+    color: #ffffff;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .birth-chart .p {
+    color: #a3a3a3;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .birth-chart .frame-5 {
+    align-items: flex-start;
+    border: 0.5px solid;
+    border-color: #4b4b4b;
+    border-radius: 23px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 11px;
+    padding: 4px 8px;
+    position: relative;
+  }
+  
+  .birth-chart .sun {
+    height: 12px;
+    position: relative;
+    width: 12px;
+  }
+  
+  .birth-chart .text-wrapper-20 {
+    color: #ffffff;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.5px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .birth-chart .text-wrapper-21 {
+    color: #a3a3a3;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.5px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .birth-chart .frame-6 {
+    border: 1px solid;
+    border-color: #3a3a3a;
+    border-radius: 19px;
+    height: 600px;
+    position: relative;
+    width: 720px;
+  }
+  
+  .birth-chart .frame-wrapper {
+    background-color: #111111;
+    border-radius: 18px;
+    height: 580px;
+    left: 10px;
+    position: relative;
+    top: 10px;
+    width: 700px;
+  }
+  
+  .birth-chart .div-wrapper {
+    height: 580px;
+    left: 40px;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+    width: 620px;
+  }
+  
+  .birth-chart .frame-7 {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    padding: 0px 0px 50px;
+    position: relative;
+    top: 40px;
+  }
+  
+  .birth-chart .frame-8 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 50px;
+    padding: 0px 0px 24px;
+    position: relative;
+  }
+  
+  .birth-chart .frame-9 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 70px;
+    position: relative;
+  }
+  
+  .birth-chart .frame-10 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+  }
+  
+  .birth-chart .frame-11 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 12px;
+    position: relative;
+  }
+  
+  .birth-chart .img-2 {
+    height: 24px;
+    position: relative;
+    width: 24px;
+  }
+  
+  .birth-chart .text-wrapper-22 {
+    color: #ffffff;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .birth-chart .text-wrapper-23 {
+    color: #b9b9b9;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 275px;
+  }
+  
+  .birth-chart .text-wrapper-24 {
+    color: #ffffff;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: 161px;
+  }
+  
+  .birth-chart .frame-12 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+  }
+  
+  .birth-chart .text-wrapper-25 {
+    color: #ffffff;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 233px;
+  }
+  
+  .birth-chart .frame-13 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 5px;
+    position: relative;
+  }
+  
+  .birth-chart .frame-14 {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 16px;
+    left: 1049px;
+    position: absolute;
+    top: 738px;
+  }
+  
+  .birth-chart .frame-15 {
+    align-items: center;
+    background-color: #1c1c1c;
+    border-radius: 41px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 17px;
+    position: relative;
+  }
+  
+  .birth-chart .download {
+    height: 24px;
+    position: relative;
+    width: 16px;
+  }
+  
+  .birth-chart .text-wrapper-26 {
+    color: #f1f1f1;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .birth-chart .frame-16 {
+    align-items: center;
+    background-color: #ffde59;
+    border-radius: 41px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 17px;
+    position: relative;
+  }
+  
+  .birth-chart .text-wrapper-27 {
+    color: #000000;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .birth-chart .arrow-left {
+    height: 24px;
+    position: relative;
+    width: 10px;
+  }
