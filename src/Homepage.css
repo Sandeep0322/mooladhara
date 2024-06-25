@@ -180,7 +180,6 @@
   
   .home-page .frame-7 {
     align-items: center;
-    background-color: #ffde59;
     border-radius: 42px;
     display: flex;
     flex: 0 0 auto;
@@ -749,8 +748,12 @@
   
   .home-page .crown-2 {
     height: 20px;
-    left: 150px;
+    left: 120px;
     position: absolute;
     top: 0;
     width: 20px;
+  }
+  .selected {
+    background-color: #29911b; /* Example background color for selected item */
+    color: white; /* Example text color for selected item */
   }

@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Homepage.css";
 import { useNavigate } from "react-router-dom";
+import { Pacakage } from "./Package";
 
 export const HomePage = () => {
   const navigate = useNavigate();
+
+  const [selectedItem, setSelectedItem] = useState("Ask"); // State to track selected item
+  const [showPackage, setShowPackage] = useState(false); // State to manage Package visibility
+
+  const handleShowPackage = () => {
+    setShowPackage(true); // Set state to show Package component
+  };
+
+  const handleClosePackage = () => {
+    setShowPackage(false);
+    // Any other logic you need to execute on package close
+  };
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+    // You can add logic here to handle different actions based on the selected item
+    switch (item) {
+      case "Ask":
+        // Handle 'Ask' click action
+        break;
+      case "History":
+        // Handle 'History' click action
+        break;
+      case "Horoscope":
+        // Handle 'Horoscope' click action
+        break;
+      case "Profile":
+        // Handle 'Profile' click action
+        break;
+      default:
+        break;
+    }
+  };
 
   const handlePackage = () => {
     // Perform login logic here
@@ -32,25 +66,38 @@ export const HomePage = () => {
               <div className="text-wrapper-4">0</div>
             </div>
           </div>
-          <div className="frame-6">
-            <div className="frame-7">
-              <img
-                className="img-2"
-                alt="Comment"
-                color="white"
-                src="ask-1.svg"
-              />
+          <div className="frame-6 frame-7">
+            <div
+              className={`frame-8 ${selectedItem === "Ask" ? "selected" : ""}`}
+              onClick={() => handleItemClick("Ask")}
+            >
+              <img className="img-2" alt="Comment" src="ask-1.svg" />
               <div className="text-wrapper-5">Ask</div>
             </div>
-            <div className="frame-8">
+            <div
+              className={`frame-8 ${
+                selectedItem === "History" ? "selected" : ""
+              }`}
+              onClick={() => handleItemClick("History")}
+            >
               <img className="img-2" alt="Clock" src="history.svg" />
               <div className="text-wrapper-6">History</div>
             </div>
-            <div className="frame-8">
+            <div
+              className={`frame-8 ${
+                selectedItem === "Horoscope" ? "selected" : ""
+              }`}
+              onClick={() => handleItemClick("Horoscope")}
+            >
               <img className="img-2" alt="Moon" src="horoscope.svg" />
               <div className="text-wrapper-6">Horoscope</div>
             </div>
-            <div className="frame-8">
+            <div
+              className={`frame-8 ${
+                selectedItem === "Profile" ? "selected" : ""
+              }`}
+              onClick={() => handleItemClick("Profile")}
+            >
               <img className="img-2" alt="User" src="profile.svg" />
               <div className="text-wrapper-6">Profile</div>
             </div>
@@ -235,11 +282,12 @@ export const HomePage = () => {
               </div>
             </div>
           </div>
+          {/* Render Package component based on state */}
           <div className="frame-17">
             <div className="frame-18">
               <p className="text-wrapper-29">Type here to ask anything</p>
             </div>
-            <div className="overlap-group-2" onClick={handlePackage}>
+            <div className="overlap-group-2" onClick={handleShowPackage}>
               <div className="frame-19">
                 <div className="text-wrapper-30">Ask</div>
               </div>
@@ -247,6 +295,7 @@ export const HomePage = () => {
             </div>
           </div>
         </div>
+        {showPackage && <Pacakage onClose={handleClosePackage} />}{" "}
       </div>
     </div>
   );

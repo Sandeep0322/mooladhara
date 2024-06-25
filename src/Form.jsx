@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Form.css";
 import "react-datepicker/dist/react-datepicker.css";
 import { DraggableTimePicker } from "./DraggableTimePicker"; // Ensure correct path
@@ -12,13 +12,12 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { MobileTimePicker } from "@mui/x-date-pickers/MobileTimePicker";
 import dayjs from "dayjs";
 import CustomDatepicker from "./CustomDatePicker"; // Ensure correct path
+import CustomPlaceholder from "./CustomPlaceHolder";
 
 export const Form = () => {
   const navigate = useNavigate();
   const [genderSelected, setGenderSelected] = useState(null);
   const [selectedState, setSelectedState] = useState(null);
-  const [isTimePickerOpen, setIsTimePickerOpen] = useState(false); // State for time picker modal
-
   const [selectedDate, setSelectedDate] = useState(null);
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
 
@@ -44,16 +43,7 @@ export const Form = () => {
   };
 
   const handleStateSelect = (state) => {
-    setSelectedState(state);
-  };
-
-  const handleTimeSelect = (time) => {
-    setSelectedTime(time);
-    setIsTimePickerOpen(false); // Close the time picker modal after selection
-  };
-
-  const toggleTimePicker = () => {
-    setIsTimePickerOpen(!isTimePickerOpen); // Toggle time picker modal visibility
+    setSelectedState(state.value);
   };
 
   // Check if all required fields are filled
@@ -64,9 +54,28 @@ export const Form = () => {
     // Perform login logic here
     // For demo purposes, simulate successful login
 
+    // Save form data to local storage
+    const formData = {
+      genderSelected,
+      selectedState: selectedState,
+      selectedDate,
+      selectedTime,
+    };
+    localStorage.setItem("formData", JSON.stringify(formData));
+
     // Navigate to Home component
     navigate("/confirmingDetails");
   };
+
+  useEffect(() => {
+    const savedData = localStorage.getItem("formData");
+    if (savedData) {
+      const parsedData = JSON.parse(savedData);
+      setGenderSelected(parsedData.genderSelected);
+      setSelectedDate(parsedData.selectedDate);
+      // setSelectedTime(parsedData.selectedTime);
+    }
+  }, []);
 
   return (
     <div className="form">
@@ -159,7 +168,6 @@ export const Form = () => {
 
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <MobileTimePicker
-                value={selectedTime}
                 onChange={handleMobileTimeChange}
                 open={showMobileTimePicker}
                 onOpen={() => setShowMobileTimePicker(true)}
@@ -203,6 +211,21 @@ export const Form = () => {
                 placeholder="Search your birth place"
                 className="react-select-container"
                 classNamePrefix="react-select"
+                components={{ Placeholder: CustomPlaceholder }}
+                styles={{
+                  singleValue: (provided) => ({
+                    ...provided,
+                    color: "black",
+                  }),
+                  option: (provided) => ({
+                    ...provided,
+                    color: "black",
+                  }),
+                  placeholder: (provided) => ({
+                    ...provided,
+                    color: "black",
+                  }),
+                }}
               />
             </div>
           </div>

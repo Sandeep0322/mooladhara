@@ -5,6 +5,31 @@ import { useNavigate } from "react-router-dom";
 export const BirthChart = () => {
   const navigate = useNavigate();
 
+  const generateDownload = () => {
+    // Example content to download (replace with actual content generation logic)
+    const content = `
+      Birth Chart Summary:
+      - Ascendant: Ascendant in Virgo (Kanya)
+      - Sun Sign: Cancer (Karkat)
+      - Moon Sign: Scorpio (Vrishchik)
+      - Sun: Sun in Gemini (Mithun)
+      - Mercury: Mercury in Gemini (Mithun)
+      - Venus: Venus in Gemini (Mithun)
+      - Mars: Mars in Gemini (Mithun)
+      - Jupiter: Jupiter in Taurus (Vrish)
+      - Saturn: Saturn in Taurus (Vrish)
+    `;
+
+    // Create a Blob object from the content
+    const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+
+    // Create a download link
+    const downloadLink = document.createElement("a");
+    downloadLink.href = URL.createObjectURL(blob);
+    downloadLink.download = "birth_chart_summary.txt"; // File name
+    downloadLink.click();
+  };
+
   const handleContinue = () => {
     // Perform login logic here
     // For demo purposes, simulate successful login
@@ -257,7 +282,7 @@ export const BirthChart = () => {
           </div>
         </div>
         <div className="frame-14">
-          <div className="frame-15">
+          <div className="frame-15" onClick={generateDownload}>
             <img className="download" alt="Download" src="download.svg" />
             <div className="text-wrapper-26">Download</div>
           </div>

@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ConfirmingDetails.css";
 import { useNavigate } from "react-router-dom";
+import dayjs from "dayjs";
 
 export const ConfirmingDetails = () => {
   const navigate = useNavigate();
+  const [genderSelected, setGenderSelected] = useState(null);
+  const [selectedState, setSelectedState] = useState(null);
+  const [selectedDay, setSelectedDay] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
+
+  useEffect(() => {
+    const savedData = localStorage.getItem("formData");
+    if (savedData) {
+      const parsedData = JSON.parse(savedData);
+
+      // Utility functions to get date, time, and weekday separately
+      const getDate = dayjs(parsedData.selectedDate).format("MMM DD YYYY");
+      const getTime = dayjs(parsedData.selectedTime).format("hh:mm:ss A");
+      const getWeekday = dayjs(parsedData.selectedDate).format("dddd");
+      setGenderSelected(parsedData.genderSelected);
+      setSelectedState(parsedData.selectedState);
+      setSelectedDate(getDate);
+      setSelectedDay(getWeekday);
+      setSelectedTime(getTime);
+    }
+  }, []);
 
   const handleBack = () => {
     // Perform login logic here
@@ -49,19 +72,19 @@ export const ConfirmingDetails = () => {
           <div className="frame-6">
             <div className="frame-7">
               <div className="text-wrapper-6">Date</div>
-              <div className="text-wrapper-7">Thu Jun 15 2000.</div>
+              <div className="text-wrapper-7">{selectedDate}</div>
             </div>
             <div className="frame-7">
               <div className="text-wrapper-6">Time</div>
-              <div className="text-wrapper-7">12:30:00 PM</div>
+              <div className="text-wrapper-7">{selectedTime}</div>
             </div>
             <div className="frame-7">
               <div className="text-wrapper-6">Weekday</div>
-              <div className="text-wrapper-7">Thursday</div>
+              <div className="text-wrapper-7">{selectedDay}</div>
             </div>
             <div className="frame-7">
               <div className="text-wrapper-6">Birth location</div>
-              <div className="text-wrapper-7">Chennai, Tamil Nadu, India</div>
+              <div className="text-wrapper-7">{selectedState}</div>
             </div>
           </div>
         </div>

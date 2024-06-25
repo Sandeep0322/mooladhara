@@ -748,7 +748,7 @@
   
   .pacakage .crown-2 {
     height: 20px;
-    left: 83px;
+    left: 120px;
     position: absolute;
     top: 0;
     width: 20px;
@@ -789,10 +789,10 @@
     align-items: center;
     border: 1px solid;
     border-color: #353535;
-    border-radius: 32px;
+    border-radius: 22px;
     display: inline-flex;
     gap: 8px;
-    left: 294px;
+    left: 300px;
     padding: 8px;
     position: absolute;
     top: 74px;
@@ -826,7 +826,7 @@
   .pacakage .text-wrapper-32 {
     color: #ffffff;
     font-family: "Lato-Regular", Helvetica;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     letter-spacing: 0;
     line-height: normal;
