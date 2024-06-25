@@ -8,10 +8,12 @@ import { BirthChart } from "./BirthChart";
 import { HomePage } from "./HomePage";
 import { ConfirmingDetails } from "./ConfirmingDetails";
 import { Pacakage } from "./Package";
+import { CssBaseline } from "@mui/material";
 
 function App() {
   return (
     <Router>
+      <CssBaseline />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<HomePage />} />

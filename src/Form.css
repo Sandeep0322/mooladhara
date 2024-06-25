@@ -1,449 +1,573 @@
 .form {
-    background-color: #000000;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .form .overlap-group {
-    height: 820px;
-    left: 100px;
-    position: relative;
-    top: -10px;
-    width: 2424px;
-  }
-  
-  .form .frame {
-    align-items: flex-start;
-    display: inline-flex;
-    left: 0;
-    padding: 10px;
-    position: absolute;
-    top: 0;
-  }
-  
-  .form .image {
-    height: 800px;
-    object-fit: cover;
-    position: relative;
-    width: 1202px;
-  }
-  
-  .form .img {
-    height: 800px;
-    object-fit: cover;
-    position: relative;
-    width: 238px;
-  }
-  
-  .form .div {
-    align-items: center;
-    display: inline-flex;
-    gap: 12px;
-    left: 110px;
-    position: absolute;
-    top: 45px;
-  }
-  
-  .form .element {
-    height: 40px;
-    position: relative;
-    width: 40px;
-  }
-  
-  .form .frame-2 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 6px;
-    position: relative;
-  }
-  
-  .form .text-wrapper {
-    color: #ffde59;
-    font-family: "Lato-Bold", Helvetica;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .form .text-wrapper-2 {
-    color: #ffde59;
-    font-family: "Lato-Bold", Helvetica;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: normal;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .form .div-wrapper {
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 23px;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 10px;
-    justify-content: center;
-    padding: 3px 5px;
-    position: relative;
-  }
-  
-  .form .text-wrapper-3 {
-    color: #000000;
-    font-family: "Lato-Medium", Helvetica;
-    font-size: 7px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .form .p {
-    color: #ffde59;
-    font-family: "Lato-SemiBold", Helvetica;
-    font-size: 25px;
-    font-weight: 600;
-    left: 506px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 120px;
-    width: 447px;
-  }
-  
-  .form .frame-3 {
-    height: 459px;
-    left: 110px;
-    position: absolute;
-    top: 231px;
-    width: 1240px;
-  }
-  
-  .form .frame-4 {
-    align-items: flex-start;
-    background-color: #070707;
-    border: 1px solid;
-    border-color: #191919;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    height: 205px;
-    left: 0;
-    padding: 40px 0px 0px 40px;
-    position: absolute;
-    top: 0;
-    width: 595px;
-  }
-  
-  .form .text-wrapper-4 {
-    color: #ffffff;
-    font-family: "Lato-Regular", Helvetica;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    width: fit-content;
-  }
-  
-  .form .frame-5 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 8px;
-    position: relative;
-  }
-  
-  .form .component {
-    align-items: center;
-    background-color: #101010;
-    border-radius: 32px;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 10px;
-    height: 44px;
-    justify-content: center;
-    padding: 10px 15px;
-    position: relative;
-  }
-  
-  .form .text-wrapper-5 {
-    color: #ffffff;
-    font-family: "Lato-Regular", Helvetica;
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .form .frame-6 {
-    align-items: flex-start;
-    background-color: #070707;
-    border: 1px solid;
-    border-color: #191919;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    height: 205px;
-    left: 645px;
-    padding: 40px 0px 0px 40px;
-    position: absolute;
-    top: 0;
-    width: 595px;
-  }
-  
-  .form .frame-7 {
-    align-items: center;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 15px;
-    position: relative;
-  }
-  
-  .form .text-wrapper-6 {
-    color: #ffffff;
-    font-family: "Lato-Regular", Helvetica;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .form .text-wrapper-7 {
-    color: #828282;
-    font-family: "Lato-Regular", Helvetica;
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .form .frame-wrapper {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 16px;
-    position: relative;
-  }
-  
-  .form .frame-8 {
-    align-items: center;
-    background-color: #111111;
-    border-radius: 7px;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 10px;
-    justify-content: center;
-    padding: 10px;
-    position: relative;
-  }
-  
-  .form .img-2 {
-    height: 24px;
-    position: relative;
-    width: 24px;
-  }
-  
-  .form .frame-9 {
-    align-items: flex-start;
-    background-color: #070707;
-    border: 1px solid;
-    border-color: #191919;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    height: 205px;
-    left: 0;
-    padding: 40px 0px 0px 40px;
-    position: absolute;
-    top: 254px;
-    width: 595px;
-  }
-  
-  .form .frame-10 {
-    align-items: flex-start;
-    background-color: #070707;
-    border: 1px solid;
-    border-color: #191919;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    height: 205px;
-    left: 645px;
-    padding: 40px 0px 0px 40px;
-    position: absolute;
-    top: 254px;
-    width: 595px;
-  }
-  
-  .form .component-2 {
-    align-items: center;
-    background-color: #101010;
-    border-radius: 7px;
-    display: flex;
-    gap: 20px;
-    height: 44px;
-    padding: 10px 15px;
-    position: relative;
-    width: 515px;
-  }
-  
-  .form .text-wrapper-8 {
-    color: #2f2f2f;
-    font-family: "Lato-Regular", Helvetica;
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: normal;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .form .frame-11 {
-    align-items: center;
-    border-radius: 41px;
-    display: inline-flex;
-    gap: 10px;
-    justify-content: center;
-    left: 1186px;
-    opacity: 0.5;
-    padding: 10px 17px;
-    position: absolute;
-    top: 730px;
-  }
-  .form .enable {
-    background-color: #f8ce27;
-  }
-  .form .disable {
-    background-color: #6a6c65;
-  }
-  
-  .form .arrow-left {
-    height: 24px;
-    position: relative;
-    width: 10px;
-  }
-  .component {
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  /* Define styles for the selected state */
-  .component.selected {
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* White text color */
-    border-color: #4CAF50; /* Green border color */
-  }
-  .custom-date-picker {
-    position: absolute;
-    top: 60px; /* Adjust positioning as needed */
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    z-index: 1000; /* Ensure it appears above other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-  }
-  
-  .date-option {
-    cursor: pointer;
-    padding: 5px 10px;
-  }
-  
-  .date-option:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .selected-date {
-    color: #4caf50; /* Green text color for selected date */
-  }
+  background-color: #000000;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* Add your existing styles here */
-  
-  .time-picker-container {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .time-picker-modal {
-    position: absolute;
-    top: 50px;
-    left: 20px;
-    z-index: 100;
-  }
-  .react-select-container {
-    width: 100%;
-  }
-  
-  .react-select__control {
-    background-color: #101010;
-    border: none;
-    color: #ffffff;
-  }
-  
-  .react-select__menu {
-    background-color: #101010;
-    color: #ffffff;
-  }
-  
-  .react-select__option--is-focused {
-    background-color: #202020;
-  }
-  
-  .react-select__option--is-selected {
-    background-color: #303030;
-  }
-  .form .save-continue {
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: normal;
-    position: relative;
-    white-space: nowrap;
-    padding: 10px 20px; /* Add padding for better button appearance */
-    border-radius: 5px; /* Add border-radius for rounded corners */
-    text-align: center; /* Center the text */
-    transition: background-color 0.3s, opacity 0.3s; /* Add transition for smooth effect */
+.form .overlap-group {
+  height: 820px;
+  left: 100px;
+  position: relative;
+  top: -10px;
+  width: 2424px;
+}
+
+.form .frame {
+  align-items: flex-start;
+  display: inline-flex;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+}
+
+.form .image {
+  height: 800px;
+  object-fit: cover;
+  position: relative;
+  width: 1202px;
+}
+
+.form .img {
+  height: 800px;
+  object-fit: cover;
+  position: relative;
+  width: 238px;
+}
+
+.form .div {
+  align-items: center;
+  display: inline-flex;
+  gap: 12px;
+  left: 110px;
+  position: absolute;
+  top: 45px;
+}
+
+.form .element {
+  height: 40px;
+  position: relative;
+  width: 40px;
+}
+
+.form .frame-2 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.form .text-wrapper {
+  color: #ffde59;
+  font-family: 'Lato-Bold', Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.form .text-wrapper-2 {
+  color: #ffde59;
+  font-family: 'Lato-Bold', Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.form .div-wrapper {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 23px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 3px 5px;
+  position: relative;
+}
+
+.form .text-wrapper-3 {
+  color: #000000;
+  font-family: 'Lato-Medium', Helvetica;
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.form .p {
+  color: #ffde59;
+  font-family: 'Lato-SemiBold', Helvetica;
+  font-size: 25px;
+  font-weight: 600;
+  left: 506px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 120px;
+  width: 447px;
+}
+
+.form .frame-3 {
+  height: 459px;
+  left: 110px;
+  position: absolute;
+  top: 231px;
+  width: 1240px;
+}
+
+.form .frame-4 {
+  align-items: flex-start;
+  background-color: #070707;
+  border: 1px solid;
+  border-color: #191919;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 205px;
+  left: 0;
+  padding: 40px 0px 0px 40px;
+  position: absolute;
+  top: 0;
+  width: 595px;
+}
+
+.form .text-wrapper-4 {
+  color: #ffffff;
+  font-family: 'Lato-Regular', Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+}
+
+.form .frame-5 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+
+.form .component {
+  align-items: center;
+  background-color: #101010;
+  border-radius: 32px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  height: 44px;
+  justify-content: center;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.form .text-wrapper-5 {
+  color: #ffffff;
+  font-family: 'Lato-Regular', Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.form .frame-6 {
+  align-items: flex-start;
+  background-color: #070707;
+  border: 1px solid;
+  border-color: #191919;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 205px;
+  left: 645px;
+  padding: 40px 0px 0px 40px;
+  position: absolute;
+  top: 0;
+  width: 595px;
+}
+
+.form .frame-7 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 15px;
+  position: relative;
+}
+
+.form .text-wrapper-6 {
+  color: #ffffff;
+  font-family: 'Lato-Regular', Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.form .text-wrapper-7 {
+  color: #828282;
+  font-family: 'Lato-Regular', Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.form .frame-wrapper {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  position: relative;
+}
+
+.form .frame-8 {
+  align-items: center;
+  background-color: #111111;
+  border-radius: 7px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+}
+
+.form .img-2 {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.form .frame-9 {
+  align-items: flex-start;
+  background-color: #070707;
+  border: 1px solid;
+  border-color: #191919;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 205px;
+  left: 0;
+  padding: 40px 0px 0px 40px;
+  position: absolute;
+  top: 254px;
+  width: 595px;
+}
+
+.form .frame-10 {
+  align-items: flex-start;
+  background-color: #070707;
+  border: 1px solid;
+  border-color: #191919;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 205px;
+  left: 645px;
+  padding: 40px 0px 0px 40px;
+  position: absolute;
+  top: 254px;
+  width: 595px;
+}
+
+.form .component-2 {
+  align-items: center;
+  background-color: #101010;
+  border-radius: 7px;
+  display: flex;
+  gap: 20px;
+  height: 44px;
+  padding: 10px 15px;
+  position: relative;
+  width: 515px;
+}
+
+.form .text-wrapper-8 {
+  color: #2f2f2f;
+  font-family: 'Lato-Regular', Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.form .frame-11 {
+  align-items: center;
+  border-radius: 41px;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  left: 1186px;
+  opacity: 0.5;
+  padding: 10px 17px;
+  position: absolute;
+  top: 730px;
+}
+.form .enable {
+  background-color: #f8ce27;
+}
+.form .disable {
+  background-color: #6a6c65;
+}
+
+.form .arrow-left {
+  height: 24px;
+  position: relative;
+  width: 10px;
+}
+.component {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Define styles for the selected state */
+.component.selected {
+  background-color: #29911b; /* Green background color */
+  color: white; /* White text color */
+  border-color: #4caf50; /* Green border color */
+}
+.custom-date-picker {
+  position: absolute;
+  top: 60px; /* Adjust positioning as needed */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000; /* Ensure it appears above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.date-option {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.date-option:hover {
+  background-color: #f0f0f0;
+}
+
+.selected-date {
+  color: #4caf50; /* Green text color for selected date */
+}
+
+/* Add your existing styles here */
+
+.time-picker-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.time-picker-modal {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  z-index: 100;
+}
+.react-select-container {
+  width: 100%;
+}
+
+.react-select__control {
+  background-color: #101010;
+  border: none;
+  color: #ffffff;
+}
+
+.react-select__menu {
+  background-color: #101010;
+  color: #ffffff;
+}
+
+.react-select__option--is-focused {
+  background-color: #202020;
+}
+
+.react-select__option--is-selected {
+  background-color: #303030;
+}
+.form .save-continue {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  padding: 10px 20px; /* Add padding for better button appearance */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  text-align: center; /* Center the text */
+  transition: background-color 0.3s, opacity 0.3s; /* Add transition for smooth effect */
+}
+
+/* Form.css */
+.datepicker-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 496px;
+  height: 450px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.datepicker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.datepicker-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.day.selected {
+  background-color: #29911b;
+  color: white;
+}
+
+.day.empty {
+  visibility: hidden;
+}
+
+.day:hover {
+  background-color: #e0e0e0; /* Light grey background on hover */
+}
+
+.datepicker-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.timepicker-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timepicker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.timepicker-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timepicker-hours,
+.timepicker-minutes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.time-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.time-item.selected {
+  background-color: #29911b;
+  color: white;
+}
+
+.time-item:hover {
+  background-color: #e0e0e0;
+}
+
+.timepicker-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.save-button {
+  background-color: #29911b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }

@@ -1,26 +1,46 @@
 import React, { useState } from "react";
 import "./Form.css";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { DraggableTimePicker } from "./DraggableTimePicker"; // Ensure correct path
 import Select from "react-select";
 import { indianStates } from "./states"; // Ensure correct path
 import { useNavigate } from "react-router-dom";
+import { Box, Typography } from "@mui/material";
+import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { MobileTimePicker } from "@mui/x-date-pickers/MobileTimePicker";
+import dayjs from "dayjs";
+import CustomDatepicker from "./CustomDatePicker"; // Ensure correct path
 
 export const Form = () => {
   const navigate = useNavigate();
   const [genderSelected, setGenderSelected] = useState(null);
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedTime, setSelectedTime] = useState(null); // State for selected time
   const [selectedState, setSelectedState] = useState(null);
   const [isTimePickerOpen, setIsTimePickerOpen] = useState(false); // State for time picker modal
 
-  const handleGenderSelect = (gender) => {
-    setGenderSelected(gender === genderSelected ? null : gender);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
+
+  const [showMobileTimePicker, setShowMobileTimePicker] = React.useState(false);
+  const [selectedTime, setSelectedTime] = React.useState(null);
+
+  const toggleMobileTimePicker = () => {
+    setShowMobileTimePicker(!showMobileTimePicker);
   };
 
-  const handleDateSelect = (date) => {
+  const handleMobileTimeChange = (newTime) => {
+    setSelectedTime(newTime);
+    // setShowMobileTimePicker(false); // Hide the mobile time picker after selecting a time
+  };
+
+  const handleDateChange = (date) => {
     setSelectedDate(date);
+    setIsDatePickerOpen(false);
+  };
+
+  const handleGenderSelect = (gender) => {
+    setGenderSelected(gender === genderSelected ? null : gender);
   };
 
   const handleStateSelect = (state) => {
@@ -47,6 +67,7 @@ export const Form = () => {
     // Navigate to Home component
     navigate("/confirmingDetails");
   };
+
   return (
     <div className="form">
       <div className="overlap-group">
@@ -100,25 +121,33 @@ export const Form = () => {
                 (Accurate D.O.B is crucial for precise astrological analysis)
               </p>
             </div>
-            <div className="frame-wrapper">
-              <div className="frame-8">
-                <DatePicker
-                  selected={selectedDate}
-                  onChange={handleDateSelect}
-                  dateFormat="MM/dd/yyyy"
-                  placeholderText="Select date"
-                />
-                {selectedDate && (
-                  <div className="text-wrapper-5 selected-date">
-                    {selectedDate.toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    })}
-                  </div>
-                )}
-              </div>
-            </div>
+            <Box
+              sx={{
+                minWidth: "127px",
+                height: "44px",
+                backgroundColor: selectedDate ? "#29911B" : "#111111",
+                borderRadius: "7px",
+                p: "10px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: "10px",
+                cursor: "pointer",
+              }}
+              onClick={() => setIsDatePickerOpen(true)} // Open the datepicker modal on click
+            >
+              <img
+                src="calendar.svg"
+                width="24px"
+                height="24px"
+                alt="calendar"
+              />
+              <Typography sx={{ fontSize: "15px", color: "#FFFFFF" }}>
+                {selectedDate
+                  ? dayjs(selectedDate).format("ddd - DD - MMM - YYYY")
+                  : "Select date"}
+              </Typography>
+            </Box>
           </div>
           <div className="frame-9">
             <div className="frame-7">
@@ -127,30 +156,43 @@ export const Form = () => {
                 (Accurate Time is crucial for precise astrological analysis)
               </p>
             </div>
-            <div className="frame-wrapper">
-              <div className="frame-8">
-                <div className="time-picker-container">
-                  <img
-                    className="img-2"
-                    alt="Clock"
-                    src="time.svg"
-                    onClick={toggleTimePicker} // Click handler to toggle time picker modal
-                  />
-                  <div
-                    className="text-wrapper-5"
-                    onClick={toggleTimePicker} // Make the text clickable as well
-                  >
-                    {selectedTime ? selectedTime : "Select time"}
-                  </div>
-                </div>
-                <DraggableTimePicker
-                  isOpen={isTimePickerOpen}
-                  selectedTime={selectedTime}
-                  onSelect={handleTimeSelect}
-                  onClose={() => setIsTimePickerOpen(false)}
-                />
-              </div>
-            </div>
+
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <MobileTimePicker
+                value={selectedTime}
+                onChange={handleMobileTimeChange}
+                open={showMobileTimePicker}
+                onOpen={() => setShowMobileTimePicker(true)}
+                onClose={() => setShowMobileTimePicker(false)}
+                minutesStep={5} // Set minutesStep to allow selection of minutes
+                sx={{
+                  display: "none",
+                }}
+              />
+
+              {/* Custom Box component to trigger mobile time picker */}
+              <Box
+                sx={{
+                  minWidth: "100px",
+                  height: "44px",
+                  backgroundColor: selectedTime ? "#29911B" : "#111111",
+                  borderRadius: "7px",
+                  p: "10px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  cursor: "pointer",
+                }}
+                onClick={toggleMobileTimePicker}
+              >
+                <img src="time.svg" width="24px" height="24px" alt="time" />
+                <Typography sx={{ fontSize: "15px", color: "#FFFFFF" }}>
+                  {selectedTime
+                    ? dayjs(selectedTime).format("hh:mm A") // Format with AM/PM
+                    : "Select time"}
+                </Typography>
+              </Box>
+            </LocalizationProvider>
           </div>
           <div className="frame-10">
             <div className="text-wrapper-6">Select your birth place</div>
@@ -177,6 +219,12 @@ export const Form = () => {
           </div>
         )}
       </div>
+      <CustomDatepicker
+        open={isDatePickerOpen}
+        onClose={() => setIsDatePickerOpen(false)}
+        selectedDate={selectedDate}
+        onDateChange={handleDateChange}
+      />
     </div>
   );
 };
