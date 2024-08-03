@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./build",
+    "rootDir": "./", // Update this to match your project structure
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "jsx": "react"
+  },
+  "include": [
+    "src/**/*.ts",
+    "middleware/*.ts",
+    "services/*.ts",
+    "startup/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
