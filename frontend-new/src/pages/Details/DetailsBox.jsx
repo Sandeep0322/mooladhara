@@ -1,5 +1,6 @@
 import { Box, Button, Modal, Typography, useMediaQuery } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { localeKeys } from "../../resources/typography/localeKeys";
 import { themeColors } from "../../resources/typography/colors";
 import { flexStyles } from "../../resources/typography/flexStyles";
@@ -73,9 +74,12 @@ const DetailsBox = ({ name }) => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.href);
     const authToken = urlParams.get("authToken");
-    localStorage.setItem("authToken", authToken);
+    if (authToken !== null) {
+      localStorage.setItem("authToken", authToken);
+    }
+    debugger;
     navigate("/update-details");
-  });
+  }, []);
 
   console.log(isDatePickerOpen, "asldkfjjladfj");
 
@@ -95,6 +99,34 @@ const DetailsBox = ({ name }) => {
   const handleGenderClick = (genderId) => {
     setSelectedGender(genderId);
   };
+
+  const saveAndContinue = async () => {
+    debugger;
+    const authToken = localStorage.getItem("authToken");
+    if (!authToken) return;
+
+    const userDetails = {
+      gender: selectedGender,
+      dateOfBirth: selectedDate
+        ? dayjs(selectedDate).format("YYYY-MM-DD")
+        : null,
+      timeOfBirth: selectedTime ? dayjs(selectedTime).format("HH:mm") : null,
+      birthPlace: selectedPlace,
+    };
+
+    debugger;
+    try {
+      await axios.post("/api/update-details", userDetails, {
+        headers: { Authorization: `${authToken}` },
+      });
+      navigate("/verify");
+    } catch (error) {
+      console.error("Error updating details:", error);
+    }
+  };
+
+  const isSaveAndContinueDisabled =
+    !selectedGender || !selectedDate || !selectedTime || !selectedPlace;
 
   return (
     <Box>
@@ -367,8 +399,12 @@ const DetailsBox = ({ name }) => {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ ...flexStyles.flexRowFlexEnd }}>
+      <Box
+        disabled={isSaveAndContinueDisabled}
+        sx={{ ...flexStyles.flexRowFlexEnd }}
+      >
         <Button
+          disabled={isSaveAndContinueDisabled}
           variant="contained"
           sx={{
             backgroundColor: themeColors.palette.customColor.main,
@@ -394,7 +430,7 @@ const DetailsBox = ({ name }) => {
               }}
             />
           }
-          onClick={() => navigate("/verify")}
+          onClick={saveAndContinue}
         >
           Save & Continue
         </Button>

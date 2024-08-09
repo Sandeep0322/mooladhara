@@ -6,6 +6,7 @@ import error from "../middleware/error";
 import swaggerSpec from "../swaggerConfig";
 import asyncMiddleware from "../middleware/async";
 import userRoutes from "./routes/user";
+import chatRoutes from "./routes/chat";
 import Users from "./models/Users";
 import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
@@ -86,6 +87,7 @@ export default function configureApp(app: Express): void {
   app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
   app.use("/api/users", userRoutes);
+  app.use("/api/chat", chatRoutes);
 
   app.get(
     "/auth/google",

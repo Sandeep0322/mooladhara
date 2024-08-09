@@ -2,6 +2,8 @@ import { Response } from "express";
 import Users from "../models/Users";
 import firebaseAdmin from "firebase-admin";
 import { CustomRequest } from "../../middleware/auth";
+import axios from "axios";
+import { astroOutput } from "../../utils/astro-output";
 
 // Create Users
 export const createUsers = async (req: CustomRequest, res: Response) => {
@@ -57,7 +59,29 @@ export const updateUsers = async (req: CustomRequest, res: Response) => {
 export const getUsers = async (req: CustomRequest, res: Response) => {
   const user = req.user;
   try {
-    res.status(200).json(user);
+    const data = await axios.post(
+      "https://rajendransp133-vedastro.hf.space/predict2/",
+      {
+        data: {
+          year: 2000,
+          month: 3,
+          date: 22,
+          hours: 15,
+          minutes: 59,
+          seconds: 0,
+          latitude: 13.05,
+          longitude: 80.17,
+          timezone: 5.5,
+        },
+      }
+    );
+    let responseArray = JSON.parse(data.data.response.replace(/'/g, '"'));
+    const astroData: any = [];
+    responseArray.map((obj: any) => {
+      const data = astroOutput.filter((out) => out.attribute === obj);
+      astroData.push(data[0]);
+    });
+    res.status(200).json({ user, data: astroData });
   } catch (error) {
     res.status(500).json({ message: "Server error", error });
   }

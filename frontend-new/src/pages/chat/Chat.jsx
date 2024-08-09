@@ -23,10 +23,13 @@ const Chat = () => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.href);
     const authToken = urlParams.get("authToken");
-    localStorage.setItem("authToken", authToken);
+    debugger;
+    if (authToken !== null) {
+      localStorage.setItem("authToken", authToken);
+    }
     navigate("/chat");
-  });
-  
+  }, []);
+
   return (
     <Box
       sx={{

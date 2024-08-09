@@ -11,13 +11,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "declaration": true,
-    "jsx": "react"
+    "jsx": "react",
+    "moduleResolution": "node",
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src/**/*.ts",
     "middleware/*.ts",
     "services/*.ts",
-    "startup/*.ts"
+    "startup/*.ts",
+    "utils/*.ts"
   ],
   "exclude": ["node_modules"]
 }
